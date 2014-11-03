@@ -1,0 +1,19 @@
+{# src/SkylinkEbook/GesAccesBundle/Resources/views/index.html.twig #}
+{# Le layout general du bundle gestion d'accès  #}
+{# héritage du layout_général :: celui de toute l'application #}
+
+{% extends "::layout.html.twig" %}
+
+{% block title %}
+    {{ parent() }} 
+{% endblock %}
+
+
+{# On herite du bloc body du layout général #}
+{% block div_container_body %}
+    
+    {# On définit un nouveau bloc, que les vues du bundle pourront remplir #}
+{% block skylink_ebook_ges_acces_body %}{% endblock %}
+
+{% endblock %}
+        

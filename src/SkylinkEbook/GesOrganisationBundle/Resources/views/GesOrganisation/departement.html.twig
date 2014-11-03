@@ -1,0 +1,90 @@
+{# empty Twig template #}     
+<div class="panel panel-default">
+
+    <div class="panel-heading">
+        <h3 class="panel-title ">
+            <strong>Gestion des départements / Options...</strong>
+        </h3>
+       <span id="img-loading"></span>
+           
+    </div>
+    <div class="panel-body">
+        
+        <form class="form-inline pull-right" role="form" method="POST" action="#" >
+             
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Mots Clés">
+                <span class="input-group-btn">
+                    <button class="btn btn-success" type="button"><span class="glyphicon glyphicon-search"></span>&nbsp;OK</button>
+                </span>
+            </div><!-- /input-group -->  
+           
+        </form>
+        <br><br>
+        
+        <form class="form " role="form" method="POST" action="{{ path('skylink_ebook_admin_organisation_ajouter', {'typeOrg': typeOrg} ) }}"  {{ form_enctype(form) }} >
+            <div class="form-group col-md-6">
+                 
+               {{ form_label(form.id, "ID département. ex : INFO", {'label_attr':{'class':'control-label'} }) }} 
+                {# Génération du label. 
+                     {{ form_label(form.username_email, "Titre de l'article") }} 
+                     <label class="sr-only" for="exampleInputEmail2">ID : </label> 
+                #}
+                {# Affichage des erreurs pour ce champ précis. #}
+                {{ form_errors(form.id) }}
+                {# Génération de l'input. #}
+                {{ form_widget(form.id, {'attr': {'class': 'form-control'} }) }}
+            </div>
+            
+            <div class="form-group col-md-6">
+                {{ form_label(form.nom, null, {'label':"Nom complet du département ", 'label_attr':{'class':'control-label'} }) }} 
+               
+                {{ form_errors(form.nom) }}
+                
+                {{ form_widget(form.nom, {'attr': {'class': 'form-control'} } ) }} 
+            </div>
+
+    
+            {#{ form_rest(form) }#}
+    
+    
+            <div class="form-group col-md-6">
+                <label for=""></label>
+                <button type="submit" class="btn btn-success">
+                    <span class="glyphicon glyphicon-save"></span>&nbsp;Enregistrer
+                </button>                                                       
+            </div> 
+    </form>   
+          
+
+    </div>
+
+    <div class="table-responsive">
+        <!-- Table -->
+        <table class="table table-bordered table-condensed table-striped" id="ronde-table-planning">
+	    <thead>
+		<tr>
+		    <th class="text-center">ID</th>
+		    <th class="text-center">Départements / Options</th>
+		    <th class="text-center">Actions</th>
+		</tr>
+            </thead>
+	    <tbody>
+                {% for departement in departements %}
+		<tr>
+		    <td> {{ departement.id }} </td>
+		    <td> {{ departement.nom }} </td>
+                    <td class="text-center">
+                        <div class="btn-group btn-group-sm">
+                            <a href="# {{ departement.id }} " class="btn btn-info  btn-ronde-start" role="button">Supprimer</a>
+                            <a href="# {{ departement.id }} " class="btn btn-warning  btn-ronde-end" role="button">Modifier</a>
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}				
+            </tbody>
+        </table>
+    </div>
+    
+</div>
+

@@ -1,0 +1,52 @@
+{# empty Twig template #}     
+<div class="panel panel-default">
+
+    <div class="panel-heading">
+        <h3 class="panel-title "><strong>Demande en cours...</strong></h3>
+       <span id="img-loading"></span>
+    </div>
+    <div class="table-responsive">
+        <!-- Table -->
+        <table class="table table-bordered table-condensed table-striped" id="ronde-table-planning">
+	    <thead>
+						<tr>
+							<th class="text-center">Nom</th>
+							<th class="text-center">Type de compte</th>
+							<th class="text-center">Téléphone</th>
+                                                        <th class="text-center">Actions</th>
+							
+						</tr>
+            </thead>
+	    <tbody>
+						<tr>
+							<td>Vially KALAMBAYI</td>
+							<td>Marketer</td>
+							<td>+243993536198</td>
+                                                        
+                                                            <td class="text-center">
+                        <div class="btn-group btn-group-sm">
+                            <a href="#'.$uneRonde->getId().'" class="btn btn-info  btn-ronde-start" role="button">Valider</a>
+                            <a href="#'.$uneRonde->getId().'" class="btn btn-warning  btn-ronde-end" role="button">Annuler</a>
+                        </div>
+                        </td>
+                                                    
+
+
+						</tr>
+						<tr>
+							<td>Billy NYANDU</td>
+							<td>Auteur</td>
+							<td>+243993536198l</td>
+	<td class="text-center">
+                        <div class="btn-group btn-group-sm">
+                            <a href="#'.$uneRonde->getId().'" class="btn btn-info  btn-ronde-start" role="button">Valider</a>
+                            <a href="#'.$uneRonde->getId().'" class="btn btn-warning  btn-ronde-end" role="button">Annuler</a>
+                        </div>
+                        </td>
+                        </tr>	
+            </tbody>
+        </table>
+    </div>
+    
+</div>
+

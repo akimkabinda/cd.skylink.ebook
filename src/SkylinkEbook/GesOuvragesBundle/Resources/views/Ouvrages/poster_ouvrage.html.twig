@@ -1,0 +1,96 @@
+{# empty Twig template #}     
+<div class="panel panel-default"><!-- debut panel form enegistrement form panel-default-->
+    <div class="panel-heading">
+                                  <h3 class="panel-title strong">
+                                      <span>Poster un ouvrage</span>
+                                      <label class="pull-right text-success" id="messages"></label>
+                                  </h3>
+                                  <span id="pp-loading"></span>
+    </div>
+    <div class="panel-body">
+                                <form role="form" id="frm-enregistrer-pp" class="frm_pp" action="#controller/pp/ppController.php?idLink=34" method="post" enctype="multipart/form-data">
+                                    <div class="form-group col-md-6">
+                                       <label for="idPP">Titre d'ouvrage:</label>
+                                        <input type="text" class="form-control" id="idPP" name="idPP" placeholder="ID du PP ici " required >
+                                 
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="typepp">Université/Organisation:</label>
+                                        <select class="form-control" id="typePP" name="typePP">
+                                            <option value="0" selected>Sélectionnez le type de PP</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="idExecutant">Département/Options:</label>
+                                        <select class="form-control"  id="idExecutant" name="idExecutant">
+                                
+                                            <option value="{$smarty.session.identifiant}" selected>{$prenom}</option>
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="idExecutant">Promotion:</label>
+                                        <select class="form-control"  id="idExecutant" name="idExecutant">
+                                
+                                            <option value="{$smarty.session.identifiant}" selected>{$prenom}</option>
+                                            
+                                        </select>       
+                                    </div>
+                                    
+                                    <div class="form-group col-md-6">
+                                        <label for="effectifGlobal">Fichier PDF PP</label>
+                                        <input type="hidden" name="MAX_FILE_SIZE" value="15728640" required/>
+                                        <input type="file"   name="myfile" id="image"  class="" required>
+                                    </div>
+                                    
+                                     <div class="form-group col-md-6">
+                                        <label for="effectifGlobal">Image de 155px × 100px :</label>
+                                        <input type="hidden" name="MAX_FILE_SIZE" value="15728640" required/>
+                                        <input type="file"   name="myfile" id="image"  class="" required>
+                                    </div>
+                          
+                                   
+                                  
+                                    <div class="form-group col-md-6 divEntrepriseExterieure">
+                                        <label for="entrepriseExterieure">Auteur du cours:</label>
+                                        <select class="form-control" id="lstEntrepriseExterieure" class="lstEntrepriseExterieure" name="tabEntrepriseExterieure[]">
+                                             <option value="0" selected> -- Sélectionnez -- </option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group col-md-6">
+                                       <label for="entrepriseExterieure">Marketer Affilié:</label>
+                                        <select class="form-control" id="lstEntrepriseExterieure" class="lstEntrepriseExterieure" name="tabEntrepriseExterieure[]">
+                                             <option value="0" selected> -- Sélectionnez -- </option>
+                                        </select>                            
+                                    </div> 
+                                      <div class="form-group col-md-3">
+                                        <label for="entrepriseUtilisatrice">Droit d'auteur:</label>
+                                        <select class="form-control"  id="entrepriseUtilisatrice" name="entrepriseUtilisatrice" >
+                                        </select>
+                                     </div>
+                                    
+                                    <div class="form-group col-md-3">
+                                       <label for="entrepriseExterieure">Catégorie:</label>
+                                        <select class="form-control" id="lstEntrepriseExterieure" class="lstEntrepriseExterieure" name="tabEntrepriseExterieure[]">
+                                             <option value="0" selected> -- Sélectionnez -- </option>
+                                        </select>                            
+                                    </div> 
+                                    <div class="form-group col-md-6">
+                                        <br>
+                                            <button type="submit" class="btn btn-primary btn-block" id="cmdEnregistrerPP">
+                                                Enregistrer
+                                            </button>                               
+                                      
+                                    </div> 
+                                                                  
+                                </form>
+   </div>
+   <div class="panel-footer">
+       <div id="progress">
+           <div id="bar"></div>
+           <div id="percent">0%</div >
+       </div>
+   </div>
+</div><!-- /pannel form enregistrer pp-->
+

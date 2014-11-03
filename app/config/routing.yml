@@ -1,0 +1,19 @@
+skylink_ebook_ges_organisation:
+    resource: "@SkylinkEbookGesOrganisationBundle/Resources/config/routing.yml"
+    prefix:   /organisation
+
+skylink_ebook_admin:
+    resource: "@SkylinkEbookAdminBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
+skylink_ebook_ges_commandes:
+    resource: "@SkylinkEbookGesCommandesBundle/Resources/config/routing.yml"
+    prefix:   /commandes
+
+skylink_ebook_ges_ouvrages:
+    resource: "@SkylinkEbookGesOuvragesBundle/Resources/config/routing.yml"
+    prefix:   /ouvrages
+
+skylink_ebook_ges_user:
+    resource: "@SkylinkEbookGesUserBundle/Resources/config/routing.yml"
+    prefix:   /users

@@ -1,0 +1,13 @@
+skylink_ebook_ges_organisation_universite:
+    path:     /gerer-universites
+    defaults: { _controller: SkylinkEbookGesOrganisationBundle:GesOrganisation:gererUniversite }
+
+skylink_ebook_ges_organisation_departement:
+    path:     /gerer-departements
+    defaults: { _controller: SkylinkEbookGesOrganisationBundle:GesOrganisation:gererDepartement }
+
+skylink_ebook_ges_organisation_promotion:
+    path:     /gerer-promotions
+    defaults: { _controller: SkylinkEbookGesOrganisationBundle:GesOrganisation:gererPromotion }
+   
+

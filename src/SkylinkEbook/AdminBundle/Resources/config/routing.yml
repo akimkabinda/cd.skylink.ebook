@@ -1,0 +1,34 @@
+skylink_ebook_admin_homepage:
+    path:     /{page} 
+    defaults: { _controller: SkylinkEbookAdminBundle:Admin:index, page: 1 }
+    requirements:
+        page: \d+
+        
+skylink_ebook_admin_demandes_partenariat:
+    path:     /demandes-partenariat
+    defaults: { _controller: SkylinkEbookAdminBundle:Admin:index }
+    
+skylink_ebook_admin_poster_ouvrage:
+    path:     /poster-ouvrage
+    defaults: { _controller: SkylinkEbookAdminBundle:Admin:posterOuvrage }
+    
+skylink_ebook_admin_universite:
+    path:     /gerer-universites
+    defaults: { _controller: SkylinkEbookAdminBundle:Admin:gererUniversite }
+
+skylink_ebook_admin_departement:
+    path:     /gerer-departements
+    defaults: { _controller: SkylinkEbookAdminBundle:Admin:gererDepartement }
+    
+skylink_ebook_admin_promotion:
+    path:     /gerer-promotions
+    defaults: { _controller: SkylinkEbookAdminBundle:Admin:gererPromotion }
+    
+skylink_ebook_admin_organisation_ajouter:
+    path:     /gerer-organisation/{typeOrg}
+    defaults: { _controller: SkylinkEbookAdminBundle:Admin:organisationAjouter}
+    requirements:
+        _method: POST
+        
+    
+

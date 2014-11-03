@@ -1,0 +1,3 @@
+skylink_ebook_ges_commandes_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: SkylinkEbookGesCommandesBundle:Default:index }

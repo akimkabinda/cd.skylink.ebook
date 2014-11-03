@@ -1,0 +1,45 @@
+{# src/SkylinkEbook/GesUserBundle/Resources/views/GesAcces/index.html.twig #}
+{% extends "SkylinkEbookAdminBundle::layout.html.twig" %}
+
+{% block title %}
+    Administration - {{ parent() }}
+{% endblock %}
+
+{# bloc body à remplir avec le template des demandes encours#}          
+{% block skylink_ebook_admin_content %}
+    
+    {# 
+      {% for article in articles %}
+        <li>
+            <a href="{{ path('akimblog_voir', {'id': article.id}) }}"> {{ article.titre }} </a>
+            par {{ article.auteur }}, le {{ article.date|date('d/m/Y') }}
+        </li>
+    {% else %}
+        <li>Pas (encore !) d'articles</li>
+    {% endfor %}
+    
+    #}
+    
+    {# 
+       //inclusion dans une page
+        {% if page_id == 1 %}
+           {% include "SkylinkEbookGesOuvragesBundle:Ouvrages:demande_partenariat.html.twig" %}
+        {% elseif page_id == 2 %}
+           {% include "SkylinkEbookGesOuvragesBundle:Ouvrages:poster_ouvrage.html.twig" %}
+        {% endif %}
+    #}
+    
+    {# 
+        {{ render(controller("OCPlatformBundle:Advert:menu")) }} 
+    
+        Ici, OCPlatformBundle:Advert:menu n'est pas un template mais une action de contrôleur, 
+        c'est la syntaxe qu'on utilise dans les routes, vous l'aurez reconnue.
+        
+       OU
+       Si vous utilisez une version de Symfony antérieure à la 2.2, alors il faut utiliser la syntaxe suivante : {% render "OCPlatformBundle:Advert:menu" %} à la place du code précédent. Cela ne change strictement rien au comportement, c'est juste la syntaxe qui change. 
+    #}
+    
+    {{ render(controller( rooting_defaults )) }} 
+    
+{% endblock %}
+

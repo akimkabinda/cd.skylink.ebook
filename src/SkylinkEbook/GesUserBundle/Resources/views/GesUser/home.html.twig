@@ -1,0 +1,158 @@
+{# src/SkylinkEbook/GesUserBundle/Resources/views/GesAcces/index.html.twig #}
+{% extends "SkylinkEbookGesUserBundle::layout.html.twig" %}
+
+{% block title %}
+    Acceuil -{{ parent() }} 
+{% endblock %}
+
+{% set user_compte = '1' %}
+{% if user_compte is defined %} {# si la variable user_compte existe == isset(user_compte) #} {% endif %}
+
+{# block barre menu #}
+
+{% block skylink_ebook_ges_acces_body %}
+    
+    <!-- Main component for a primary marketing message or call to action -->
+
+    <div class="row row-offcanvas row-offcanvas-right">
+
+         <div class="col-xs-12 col-sm-9">
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Connexion</button>
+          </p>
+          <div class="jumbotron">
+            <h1>Hello, world!</h1>
+            <p class="">Le code PIN vous permet de télécharger les ouvrages</p>
+           {#  <p>Login : {{ login }} - pwd : {{ pwd }} </p> #}
+	    <p><a class="btn btn-primary btn-lg" href="#" role="button" href="#">Obtenir le code &raquo;</a></p>
+          </div>
+          
+          <div class="row">
+              
+            <div class="col-6 col-sm-6 col-lg-4">
+                
+                <div class="thumbnail">
+                    <img src="{{ asset('img/1211.jpg') }}" alt="...">
+                    <div class="caption">
+                        <h3>Ici le nom du cours</h3>
+                        <p>Droit d'auteur 100,00</p>
+		        <p> Prof Akim KABINDA</p>
+                        <p>G1, Faculté des lettres, journalisme, Université de Kinshasa </p>
+                        <p>
+                            <a href="#" class="btn btn-primary" role="button">Télécharger</a>
+                            
+                        </p>
+                    </div>
+                </div>
+                
+            </div><!--/span-->
+            
+            <div class="col-6 col-sm-6 col-lg-4">
+                <div class="thumbnail">
+                    <img src="{{ asset('img/10.png') }}" alt="...">
+                    <div class="caption">
+                        <h3>Ici le nom du cours</h3>
+                        <p>Droit d'auteur 100,00</p>
+		        <p> Prof Akim KABINDA</p>
+                        <p>G1, Faculté des lettres, journalisme, Université de Kinshasa </p>
+                        <p>
+                            <a href="#" class="btn btn-primary" role="button">Télécharger</a>
+                            
+                        </p>
+                    </div>
+                </div>
+            </div><!--/span-->
+            
+           <div class="col-6 col-sm-6 col-lg-4">
+                <div class="thumbnail">
+                    <img src="{{ asset('img/1211.jpg') }}" alt="...">
+                    <div class="caption">
+                        <h3>Ici le nom du cours</h3>
+                        <p>Droit d'auteur 100,00</p>
+		        <p> Prof Akim KABINDA</p>
+                        <p>G1, Faculté des lettres, journalisme, Université de Kinshasa </p>
+                        <p>
+                            <a href="#" class="btn btn-primary" role="button">Télécharger</a>
+                            
+                        </p>
+                    </div>
+                </div>  
+            </div><!--/span-->
+            
+            <div class="col-6 col-sm-6 col-lg-4">
+              <div class="thumbnail">
+                    <img src="{{ asset('img/1211.jpg') }}" alt="...">
+                    <div class="caption">
+                        <h3>Ici le nom du cours</h3>
+                        <p>Droit d'auteur 100,00</p>
+		        <p> Prof Akim KABINDA</p>
+                        <p>G1, Faculté des lettres, journalisme, Université de Kinshasa </p>
+                        <p>
+                            <a href="#" class="btn btn-primary" role="button">Télécharger</a>
+                            
+                        </p>
+                    </div>
+                </div>  
+            </div><!--/span-->
+            
+            <div class="col-6 col-sm-6 col-lg-4">
+             <div class="thumbnail">
+                 <img src="{{ asset('img/10.png') }}" alt="...">
+                    <div class="caption">
+                        <h3>Ici le nom du cours</h3>
+                        <p>Droit d'auteur 100,00</p>
+		        <p> Prof Akim KABINDA</p>
+                        <p>G1, Faculté des lettres, journalisme, Université de Kinshasa </p>
+                        <p>
+                            <a href="#" class="btn btn-primary" role="button">Télécharger</a>
+                            
+                        </p>
+                    </div>
+                </div>
+            </div><!--/span-->
+            
+            <div class="col-6 col-sm-6 col-lg-4">
+                
+                <div class="thumbnail">
+                    <img src="{{ asset('img/1211.jpg') }}" alt="...">
+                    <div class="caption">
+                        <h3>Ici le nom du cours</h3>
+                        <p>Droit d'auteur 100,00</p>
+		        <p> Prof Akim KABINDA</p>
+                        <p>G1, Faculté des lettres, journalisme, Université de Kinshasa </p>
+                        <p>
+                            <a href="#" class="btn btn-primary" role="button">Télécharger</a>
+                            
+                        </p>
+                    </div>
+                </div>  
+            </div><!--/span-->
+           <div class="col-12 col-sm-6 col-lg-4">
+            <ul class="pagination">
+                <li class="disabled"><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#">2 <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#">3 <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#">4<span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#">5 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+           </div>
+                
+          </div><!--/row-->
+        </div><!--/span-->
+
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+         
+           {% include "SkylinkEbookGesUserBundle:GesUser:panier.html.twig" %}
+					
+        </div><!--/span-->
+      </div><!--/row-->
+    
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script src="{{ asset('js/offcanvas.js') }}"></script>
+          
+{% endblock %}

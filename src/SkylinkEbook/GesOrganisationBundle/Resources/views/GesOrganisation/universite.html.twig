@@ -1,0 +1,93 @@
+{# empty Twig template #}     
+<div class="panel panel-default">
+
+    <div class="panel-heading">
+        <h3 class="panel-title ">
+            <strong>Gestion des universités...</strong>
+        </h3>
+       <span id="img-loading"></span>
+           
+    </div>
+    
+    <div class="panel-body">
+       {# affiche tout les messages lors de la requêtes suivante (dans un template)#}
+       {% for flashMessage in app.session.flashbag.get('info') %}
+          <div>{{ flashMessage }}</div>
+       {% endfor %}
+        <form class="form-inline pull-right" role="form" method="POST" action="#" >
+             
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Mots clés">
+                <span class="input-group-btn">
+                    <button class="btn btn-success" type="button"><span class="glyphicon glyphicon-search"></span>&nbsp;OK</button>
+                </span>
+            </div><!-- /input-group -->  
+           
+        </form>
+        <br><br>
+        
+        <form class="form " role="form" method="POST" action="{{ path('skylink_ebook_admin_organisation_ajouter', {'typeOrg': typeOrg}) }}" {{ form_enctype(form) }}>
+            <div class="form-group col-md-6">
+                 
+               {{ form_label(form.id, "ID université. ex : UNIKIN, ISS/L'shi", {'label_attr':{'class':'control-label'} }) }} 
+                {# Génération du label. 
+                     {{ form_label(form.username_email, "Titre de l'article") }} 
+                     <label class="sr-only" for="exampleInputEmail2">ID : </label> 
+                #}
+                {# Affichage des erreurs pour ce champ précis. #}
+                {{ form_errors(form.id) }}
+                {# Génération de l'input. #}
+                {{ form_widget(form.id, {'attr': {'class': 'form-control'} }) }}
+            </div>
+            
+            <div class="form-group col-md-6">
+                {{ form_label(form.nom, null, {'label':"Nom complet de l'université ", 'label_attr':{'class':'control-label'} }) }} 
+               
+                {{ form_errors(form.nom) }}
+                
+                {{ form_widget(form.nom, {'attr': {'class': 'form-control'} } ) }} 
+            </div>
+
+    
+            {#{ form_rest(form) }#}
+    
+    
+            <div class="form-group col-md-6">
+                <label for=""></label>
+                <button type="submit" class="btn btn-success">
+                    <span class="glyphicon glyphicon-save"></span>&nbsp;Enregistrer
+                </button>                                                       
+            </div> 
+    </form>   
+          
+
+    </div>
+    <div class="table-responsive">
+        <!-- Table -->
+        <table class="table table-bordered table-condensed table-striped" id="ronde-table-planning">
+	    <thead>
+		<tr>
+		    <th class="text-center">ID</th>
+		    <th class="text-center">Université / Organisation</th>
+		    <th class="text-center">Actions</th>
+							
+	        </tr>
+            </thead>
+                {% for universite in universites %}
+		<tr>
+		    <td> {{ universite.id }} </td>
+		    <td> {{ universite.nom }} </td>
+                    <td class="text-center">
+                        <div class="btn-group btn-group-sm">
+                            <a href="# {{ universite.id }} " class="btn btn-info  btn-ronde-start" role="button">Supprimer</a>
+                            <a href="# {{ universite.id }} " class="btn btn-warning  btn-ronde-end" role="button">Modifier</a>
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}				
+            </tbody>
+        </table>
+    </div>
+    
+</div>
+

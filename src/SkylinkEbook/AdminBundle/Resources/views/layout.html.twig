@@ -1,0 +1,36 @@
+{# src/SkylinkEbook/GesAccesBundle/Resources/views/index.html.twig #}
+{# Le layout general du bundle gestion d'accès  #}
+{# héritage du layout_général :: celui de toute l'application #}
+
+{% extends "::layout.html.twig" %}
+
+{% block title %}
+    Administration 
+{% endblock %}
+
+{# block barre menu 
+{%   block div_navbar_collapse %}
+{% endblock %}
+#}
+
+{# On herite du bloc body du layout général #}
+{% block div_container_body %}
+    <div class="row">
+
+        <div class="col-sm-4 col-md-3 col-lg-3" id="" role="navigation">
+            {# Appel de la methode menuAction du controller AdminController dans la vue 
+            {{ render(controller("SkylinkEbookAdminBundle:Admin:menu", {'nombre': 3})) }}
+            #}
+
+             {% include "SkylinkEbookAdminBundle:Admin:menu_admin.html.twig" %}
+        </div><!--/span-->
+        
+        <div class="col-sm-8 col-md-9 col-lg-9">
+            {# On définit un nouveau bloc, que les vues du bundle pourront remplir #}
+            {% block skylink_ebook_admin_content %}{% endblock %}
+        </div>
+        
+        
+    </div>
+{% endblock %}
+        

@@ -1,0 +1,7 @@
+parameters:
+#    skylink_ebook_ges_user.example.class: SkylinkEbook\GesUserBundle\Example
+
+services:
+#    skylink_ebook_ges_user.example:
+#        class: %skylink_ebook_ges_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,150 @@
+{# src/SkylinkEbook/GesUserBundle/Resources/views/GesAcces/index.html.twig #}
+{% extends "SkylinkEbookGesUserBundle::layout.html.twig" %}
+
+
+{# block barre menu #}
+{%   block div_navbar_collapse %}
+    {% set skylink_signup = "http://localhost/skylink2/signup" %}
+    {% set skylink_signin = "http://localhost/skylink2/signin" %}
+    {% set oAppID = 1 %}
+    {% set oAppURI = "http://localhost/ebook.skylink.lan/web/app_dev.php/users/home" %}
+    <ul class="nav navbar-nav">
+        <li class="active">
+            <a href="{{ skylink_signup}}">S'inscrire</a>
+        </li>
+           
+    </ul>
+    <form class="navbar-form navbar-right" role="form" method="post" action="{{ skylink_signin }}" >
+            <div class="form-group">
+              <input type="text" placeholder="Email" name ="username_email" class="form-control">
+            </div>
+            
+            <div class="form-group">
+              <input type="password" placeholder="Password" name ="password" class="form-control">
+            </div>
+            
+            <input type="hidden" name ="oAppID" value="{{ oAppID }}">
+            <input type="hidden" name ="oAppURI" value="{{ oAppURI }}">
+            
+            <button type="submit" class="btn btn-success" name="submit">
+                  <span class="glyphicon glyphicon-ok-sign"></span>&nbsp;Connexion
+           </button>    
+    </form>
+  
+{% endblock %}
+            
+{% block skylink_ebook_ges_acces_body %}
+    
+    <!-- Main component for a primary marketing message or call to action -->
+
+    <div class="jumbotron">
+        <h1>Hello, world!</h1>
+        <p class="">Le code PIN vous permet de télécharger les ouvrages</p>
+	<p><a class="btn btn-primary btn-lg"  role="button" href="#">Obtenir le code &raquo;</a></p>
+    </div>
+    
+    <div class="row"><!-- row -->
+        <div class="col-xs-12 col-sm-8 col-md-7"> 
+            <div class="list-group">
+                    <a href="#" class="list-group-item active">
+                         <h4 class="list-group-item-heading">SkyLink Ebook outil de communication </h4>
+                    </a>
+                    <div class="list-group-item">         
+                    <img src="{{ asset('img/120.jpg') }}" alt="..." class="img-responsive img-rounded">   
+                    <br>
+                        <p class="list-group-item-text text-justify">
+                          Témoins des conditions dans lequelles, nous étudions, victimes de certaines contraintes 
+                          manuelles de notre système de gestion des supports didactiques que nous fournissent les professeurs, 
+                          <br><br>
+                          Vu le retard avec lequel ces outils nous parviennent ,<br> conscients de la détérioration de ces manuels ou 
+                          de leur disparition, nous sommes arrivés à  numériser les syllabus que nous fournissent les professeurs. 
+                        </p><br>
+                        <p class="list-group-item-text text-justify">
+                          Ceci est notre modeste mais très efficace manière de contribuer à la modernisation du système éducatif au 
+                          sein des universités et instituts supérieurs de notre pays. 
+                        </p><br>
+                   
+                    </div>
+            </div>
+        </div><!--/span-->
+        
+        <div class="col-xs-12 col-sm-4 col-md-5">
+                
+            <div class="list-group">
+                    <a href="#" class="list-group-item active">
+                         <h4 class="list-group-item-heading">Pourquoi numériser vos documents</h4>
+    
+                    </a>
+                    <div class="list-group-item">    
+                         
+
+                    <img src="{{ asset('img/livre.jpg') }}" alt="..." class="img-responsive img-rounded">   
+                       
+                    <br>
+                        <p class="list-group-item-text text-justify">
+                             Pour &eacute;liminer des couts de stockage, d'impression et de distribution.
+                             <br>Pour les conserver de facon s&eacute;curis&eacute; en tant qu'archive &eacute;lectronique contrairement au document papier est sensible aux dommages caus&eacute;s par l'usage, le feu et l'eau.
+	                </p>
+                    </div>
+            </div>
+                
+        </div><!--/span-->
+            
+        <div class="col-xs-12 col-sm-8 col-md-7">
+                
+            <div class="list-group">
+                    <a href="#" class="list-group-item active">
+                         <h4 class="list-group-item-heading">Importance de la numérisation</h4>
+    
+                    </a>
+                    <div class="list-group-item"> 
+                       
+                       <img src="{{ asset('img/syllabus.jpg') }}" alt="..." class="img-responsive img-rounded">   
+
+                   
+                        <br>
+                        <p class="list-group-item-text text-justify">
+                           De nos jours, le numérique est à la pointe des nouvelles technologies. Notre système permettra entre autre :
+                        </p>
+                        <ul class="text-justify">
+                            <li>De rendre plus souple l’obtention  des syllabus juste après avoir payé : 
+                                surpasser les anciennes lenteurs dues au système mécanique autres fois : retard d’impression, lourdes charges, 
+                                trop encombrant,  attendre pendant des jours pour atteindre le quorum;
+                            </li>
+                            <li>Plus de sécurité dans la traçabilité de l’obtention du syllabus pour garantir 
+                                le droit d’auteur : les étudiants téléchargeront le Syllabus au moyen d’un code 
+                                secret et personnel  utilisable une seule fois.
+                            </li>
+                            <li>
+                                Rapprocher davantage les étudiants avec l’environnement informatique, chemin indispensable pour le 
+                                développement.
+                            </li>
+                        </ul>
+                        
+                    </div>
+            </div> 
+        </div><!--/span-->
+            
+        <div class="col-xs-12 col-sm-4 col-md-5">
+                
+            <div class="list-group">
+                    <a href="#" class="list-group-item active">
+                         <h4 class="list-group-item-heading">Système sécurisé</h4>
+    
+                    </a>
+                    <div class="list-group-item">         
+                    <img src="{{ asset('img/maxresdefault.jpg') }}" alt="..." class="img-responsive img-rounded">   
+                    <br>
+                        <p class="list-group-item-text text-justify">
+                        Le système que SkyLink apporte est un modèle de sécurité informatique qui garanti du début à la fin, toute la sécurité nécessaire afin d’effectuer les transactions  et le téléchargement 
+                        en toute FIABILITE avec une RAPIDITE étonnante. <br/><br/>
+                        Incroyable! c’est fini la vieille époque où l’on devait trainner des tonnes des paperasses entre le bras.     </p>
+                    </div>
+            </div>
+        </div><!--/span-->
+ 
+                
+          </div><!--/row-->
+    
+{% endblock %}
+

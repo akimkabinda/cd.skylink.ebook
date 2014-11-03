@@ -1,0 +1,10 @@
+skylink_ebook_ges_ouvrages_demande:
+    path:     /demandes_partenariat
+    defaults: { _controller: SkylinkEbookGesOuvragesBundle:GesOuvrages:demandesPartenariat }
+
+skylink_ebook_ges_ouvrages_poster:
+    path:     /poster
+    defaults: { _controller: SkylinkEbookGesOuvragesBundle:GesOuvrages:posterOuvrage }
+    
+        
+
