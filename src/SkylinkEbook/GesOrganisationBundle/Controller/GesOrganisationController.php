@@ -79,6 +79,11 @@ class GesOrganisationController  extends Controller
                       'promotions' => $listePromotions));
         
     }
+    /**
+     * $employeeRepository =
+       $this->entityManager->getRepository('AcmeDemoBundle::Employee');
+       $employee = $employeeRepository->find($id);
+     */
     
   
 }
