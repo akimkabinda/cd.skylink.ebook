@@ -7060,3 +7060,4 @@
 127.0.0.1 - - [03/Nov/2014:00:59:00 +0100] "GET /app_dev.php/users/default HTTP/1.1" 200 5176 "http://ebook.skylink.lan/app_dev.php/admin/gerer-universites" "Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:32.0) Gecko/20100101 Firefox/32.0"
 127.0.0.1 - - [03/Nov/2014:00:59:00 +0100] "GET /app_dev.php/_wdt/3a702c HTTP/1.1" 200 11731 "http://ebook.skylink.lan/app_dev.php/users/default" "Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:32.0) Gecko/20100101 Firefox/32.0"
 127.0.0.1 - - [03/Nov/2014:00:59:01 +0100] "GET /img/slider2_bg.jpg HTTP/1.1" 304 181 "http://ebook.skylink.lan/css/design_general.css" "Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:32.0) Gecko/20100101 Firefox/32.0"
+127.0.0.1 - - [05/Nov/2014:19:07:04 +0100] "GET / HTTP/1.1" 404 844 "-" "Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:32.0) Gecko/20100101 Firefox/32.0"
