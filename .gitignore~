@@ -1,7 +1,9 @@
-#dossier personnels
+#dossiers personnels
+
 /build/
 /nbproject/private/
 /logs/*
+/.htaccess
 
 # Cache and logs (Symfony2)
 /app/cache/*

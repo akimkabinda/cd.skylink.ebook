@@ -4,6 +4,7 @@
 /nbproject/private/
 /logs/*
 
+
 # Cache and logs (Symfony2)
 /app/cache/*
 /app/logs/*
@@ -36,6 +37,6 @@
 /app/phpunit.xml
 /phpunit.xml
 
-# Composer PHAR
+# Composer PHAR et .htaccess
 /composer.phar
->>>>>>> ce888e9d9bea09f0d251d27c68813fb3226abb30
+/.htaccess
