@@ -1,7 +1,6 @@
 #dossiers personnels
 
-/build/
-/nbproject/private/
+/nbproject/private/*
 /logs/*
 
 
