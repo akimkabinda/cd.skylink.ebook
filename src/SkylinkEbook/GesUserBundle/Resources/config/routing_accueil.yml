@@ -1,0 +1,4 @@
+skylink_ebook_ges_user_index:
+    path:     /
+    defaults: { _controller: SkylinkEbookGesUserBundle:GesUser:index }
+

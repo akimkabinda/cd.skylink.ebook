@@ -1,7 +1,3 @@
-skylink_ebook_ges_user_index:
-    path:     /default
-    defaults: { _controller: SkylinkEbookGesUserBundle:GesUser:index }
-
 skylink_ebook_ges_user_login:
     path:     /login
     defaults: { _controller: SkylinkEbookGesUserBundle:GesUser:login }

@@ -1,3 +1,8 @@
+# J'ai séparé cet import afin de ne pas avoir le préfixe /users lors de l'import
+skylink_ebook:
+    resource: "@SkylinkEbookGesUserBundle/Resources/config/routing_accueil.yml"
+    prefix:   /
+
 skylink_ebook_ges_organisation:
     resource: "@SkylinkEbookGesOrganisationBundle/Resources/config/routing.yml"
     prefix:   /organisation
